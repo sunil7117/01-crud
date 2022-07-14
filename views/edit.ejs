@@ -1,0 +1,44 @@
+<%-include('./partial/header.ejs')%>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <h1 class="alert alert-success text-center">Edit Student Records</h1>
+      <form method="post" action="/student/update/<%=data._id%>">
+        <div class="mb-3">
+          <label for="Name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            value="<%=data.name%>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="Age" class="form-label">Age</label>
+          <input
+            type="text"
+            class="form-control"
+            id="age"
+            name="age"
+            value="<%=data.age%>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="Fee" class="form-label">Fees</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fee"
+            name="fees"
+            value="<%=data.fees%>"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary">back to home</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%-include('./partial/footer.ejs')%>
